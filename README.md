@@ -7,17 +7,17 @@ This project is a web application that visualizes the highest monthly temperatur
 ```
 echarts_react
 ├── front
+│   ├── public
+│   │   └── index.html
 │   ├── src
-│   │   ├── components
-│   │   │   └── ChartView.jsx
-│   │   ├── App.jsx
-│   │   ├── index.js
-│   ├── package.json
-│   └── README.md
+│   │   ├── EchartDemo.js
+│   │   ├── App.js
+│   │   └── index.js
+│   └── package.json
 ├── back
 │   ├── app.py
-│   ├── data
-│   │   └── sales.json
+│   └── mysqlhelper.py
+├── sales.sql  后端模拟数据
 └── README.md
 ```
 
@@ -37,7 +37,7 @@ The temperature data for the 30 provinces over the last 10 years can be obtained
             "一月", "二月", "三月", "四月", "五月", "六月",
             "七月", "八月", "九月", "十月", "十一月", "十二月"
         ],
-        "monthly_sales": [120, 135, 150, 160, 170, 180, 175, 165, 155, 145, 140, 130]
+        "monthly_sales": [120, 135, 150, 32, 170, 180, 15, 165, 155, 145, 140, 130]
     }
   ]
 }
@@ -49,8 +49,8 @@ The front-end application is built using React and Ant Design. It includes a men
 
 ### Key Files
 
-- **front/src/components/ChartView.jsx**: Displays temperature data using ECharts.
-- **front/src/App.jsx**: Main application component that sets up the Ant Design menu and manages state.
+- **front/src/EChartDemo.js**: Displays temperature data using ECharts.
+- **front/src/App.js**: Main application component that sets up the Ant Design menu and manages state.
 
 
 ## Backend
