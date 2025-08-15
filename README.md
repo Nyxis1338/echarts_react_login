@@ -5,19 +5,22 @@ This project is a web application that visualizes the highest monthly temperatur
 ## Project Structure
 
 ```
-echarts_react
+echarts_react_login
 ├── front
 │   ├── public
 │   │   └── index.html
 │   ├── src
 │   │   ├── EchartDemo.js
 │   │   ├── App.js
+│   │   ├── Dashboard.js
+│   │   ├── Login.js
 │   │   └── index.js
 │   └── package.json
 ├── back
 │   ├── app.py
 │   └── mysqlhelper.py
 ├── sales.sql  后端模拟数据
+├── user.sql  后端模拟数据
 └── README.md
 ```
 
