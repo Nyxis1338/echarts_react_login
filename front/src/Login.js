@@ -24,29 +24,32 @@ const Login = () => {
     }  
     
     return (
-        <div>
-            <h2>Login</h2>
-            <form onSubmit={handleLogin}>
-                <div>
-                    <label>Username:</label>
-                    <input
-                        type="text"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label>Password:</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <button type="submit">Login</button>
-            </form>
+        <div style={{ display: 'flex', height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
+          <Card title="登录" style={{ width: 300 }}>
+            <Form name="login" onFinish={handleLogin}>
+    
+              <Form.Item
+                name="username"
+                rules={[{ required: true, message: '请输入用户名!' }]}
+              >
+                <Input placeholder="用户名" value={username} onChange={(e) => setUsername(e.target.value)} />
+    
+              </Form.Item>
+              <Form.Item
+                name="password"
+                rules={[{ required: true, message: '请输入密码!' }]}
+              >
+                <Input.Password placeholder="密码" value={password} onChange={(e) => setPassword(e.target.value)} />  
+    
+              </Form.Item>
+              <Form.Item>
+                <Button type="primary" htmlType="submit" onClick={handleLogin}>
+    
+                  登录
+                </Button>
+              </Form.Item>
+            </Form>
+          </Card>
         </div>
     );
 
